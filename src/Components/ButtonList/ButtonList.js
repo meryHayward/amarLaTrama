@@ -1,41 +1,50 @@
-import React, { Component } from "react";
+import React/* , { Component }  */ from "react";
 import Button from "../Button/Button";
-import axios from "axios";
 
-class ButtonList extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			buscar: props.endpoint,
-			communities: [],
-			
-		};
-	}
 
-	componentDidMount() {
-		const cargar = `${this.state.buscar}`;
-		console.log(cargar)
-		axios.get(`${cargar}`).then((res) => {
-			console.log(res.data.comunidades)
-			const com = res.data.comunidades;
-			this.setState({
-				communities: com,
-            });
-        });    
-    }
-	
-	render() {
-        const { communities } = this.state;
-        console.log(communities)
-		return (
-			<ul className="movies__list">
-				{communities.map((u) => (
-					<Button coms={u} />
-				))}
-				
-			</ul>
-		);
-	}
+const ButtonList = () => {
+	const data = [
+		{
+			id: "101",
+			nombre: "Andrea Lourdes Lopez",
+			img: "./images/equipo/1ALourdesLopez.png",
+			cargo: "Junta directiva - Directora ejecutiva - Equipo de formación"
+		},
+		{
+			id: "102",
+			nombre: "Andrea Lourdes Lopez",
+			img: "./images/equipo/1ALourdesLopez.png",
+			cargo: "Junta directiva - Directora ejecutiva - Equipo de formación"
+		},
+		{
+			id: "103",
+			nombre: "Andrea Lourdes Lopez",
+			img: "./images/equipo/1ALourdesLopez.png",
+			cargo: "Junta directiva - Directora ejecutiva - Equipo de formación"
+		},
+		{
+			id: "104",
+			nombre: "Andrea Lourdes Lopez",
+			img: "./images/equipo/1ALourdesLopez.png",
+			cargo: "Junta directiva - Directora ejecutiva - Equipo de formación"
+		},
+		{
+			id: "105",
+			nombre: "Andrea Lourdes Lopez",
+			img: "./images/equipo/1ALourdesLopez.png",
+			cargo: "Junta directiva - Directora ejecutiva - Equipo de formación"
+		},
+	]
+	return (
+		<ul className="movies__list">
+			{data.map((u) => (
+				<li><Button coms={u} /></li>
+
+			))}
+
+		</ul>
+	);
 }
+
 
 export default ButtonList;
