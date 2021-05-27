@@ -8,7 +8,7 @@ class ButtonListSearch extends Component {
 		this.state = {
 			buscar: props.endpoint,
 			communities: [],
-			
+
 		};
 	}
 
@@ -20,11 +20,11 @@ class ButtonListSearch extends Component {
 			const com = res.data.comunidad;
 			this.setState({
 				communities: com,
-            });
-        });    
-    }
-    
-    componentDidUpdate() {
+			});
+		});
+	}
+
+	componentDidUpdate() {
 		const cargar = `${this.props.endpoint}`;
 		console.log(cargar);
 		axios.get(`${cargar}`).then((res) => {
@@ -34,17 +34,17 @@ class ButtonListSearch extends Component {
 			});
 		});
 	}
-	
+
 	render() {
-        const { communities } = this.state;
-        console.log(communities)
+		const { communities } = this.state;
+		console.log(communities)
 		return (
 			<ul className="movies__list">
 				{communities.map((u) => (
 					<Button coms={u} />
 					// pasarle la info aca a las peliculas y quye estas se las pasen el modal?
 				))}
-				
+
 			</ul>
 		);
 	}

@@ -10,6 +10,7 @@ const Communities = () => {
 			<Search />
 			{/* si no uso el buscador */}
 			<ButtonList
+				endpoint="https://ada-niwok.herokuapp.com/comunidades/"
 				data={communities}
 			/>
 			{/* //si uso el buscador
