@@ -14,26 +14,26 @@ const Search = () => {
 		}
 	};
 
-    return (
-        <section className="search">
-            <h3 className="search-title">Hola, contanos</h3>
-            <h3 className="search-title">¿De qué comunidad sos parte?</h3>
-            <div className="search-container">
-                <button className="search-container-icon">
-				<FontAwesomeIcon icon={faSearch} className="icon" />
-					</button>
-                <input
-				className="search-container-input" 
-				type="text"
-				placeholder="Busca tu comunidad"
-				value={value}
-				onChange={handleChange}
-				onKeyDown={handleKeyDown}
-			/>
-            </div>
-            {/*    <ButtonList /> */}
-        </section>
-    )
+	return (
+		<section className="search">
+			<h3 className="search-title">Hola, contanos</h3>
+			<h3 className="search-title">¿De qué comunidad sos parte?</h3>
+			<div className="search-container">
+				<button className="search-container-icon">
+					<FontAwesomeIcon icon={faSearch} className="icon" />
+				</button>
+				<input
+					className="search-container-input"
+					type="text"
+					placeholder="Busca tu comunidad"
+					value={value}
+					onChange={handleChange}
+					onKeyDown={handleKeyDown}
+				/>
+			</div>
+			{/*    <ButtonList /> */}
+		</section>
+	)
 }
 
 

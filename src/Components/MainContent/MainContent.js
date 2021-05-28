@@ -21,12 +21,12 @@ const MainContent = () => {
                 <section className="Main-container">
                     <Switch>
                         <Route exact path="/">
-                            <Communities />
+                            <Communities /> Aca en comunities estan todas
                         </Route>
-                        <Route exact path="/searchresults/:value">
+                        <Route exact path="/searchresults/:value"> aca estan filtrada el pedido
                             <SearchView />
                         </Route>
-                        <Route exact path="/Comunidad/:value">
+                        <Route exact path="/Comunidad/:value"> tocaste el btn y ves el pedido
                             <ProductView />
                         </Route>
                         <Route exact path="/DescripcionProducto/:value">

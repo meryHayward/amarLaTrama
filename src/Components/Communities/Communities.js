@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonList from "../ButtonList/ButtonList";
 import Search from "../Search/Search";
-import communities from "./data";
+import data from "./data";
 
 
 const Communities = () => {
@@ -10,7 +10,7 @@ const Communities = () => {
 			<Search />
 			{/* si no uso el buscador */}
 			<ButtonList
-				data={communities}
+				data={data}
 			/>
 			{/* //si uso el buscador
 			<SearchResults />

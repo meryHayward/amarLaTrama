@@ -14,15 +14,15 @@ const SearchResults = () => {
 	return (
 		<React.Fragment>
 			<ButtonListSearch
-				endpoint={`https://ada-niwok.herokuapp.com/comunidades/${value}`}
-			/>		
+				data={`http://localhost:3000/comunidades/${value}`}
+			/>
 			<Link to="/" className="btn-back">
 				<button type="button" className="btn-back">
-                <FontAwesomeIcon icon={faArrowLeft} className="icon" />
+					<FontAwesomeIcon icon={faArrowLeft} className="icon" />
                 VOLVER A COMUNIDADES
             </button>
 			</Link>
-			
+
 		</React.Fragment>
 	);
 };
