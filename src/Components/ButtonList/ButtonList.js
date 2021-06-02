@@ -38,10 +38,8 @@ const ButtonList = () => {
 	return (
 		<ul className="movies__list">
 			{data.map((u) => (
-				<li><Button coms={u} /></li>
-
+				<li><Button coms={u.id} /></li>
 			))}
-
 		</ul>
 	);
 }
