@@ -4,15 +4,16 @@ import {
     Link
 } from 'react-router-dom';
 
-const Button = (props) => {
+
+const Button = (coms) => {
     return (
         <React.Fragment>
 
-            <Link to={`/comunidad/${props.coms.numeroDeComunidad}`}>
+            <Link to={`/comunidad/${coms.numeroDeComunidad}`}>
                 <div className="btn-container" >
                     <button className="btn">
-                        <h4 className="btn-title">Comunidad {props.coms.numeroDeComunidad}</h4>
-                        <p className="btn-text">{props.coms.localidad} - {props.coms.provincia}</p>
+                        <h4 className="btn-title">Comunidad {coms.id}</h4>
+                        <p className="btn-text">{coms.localidad} - {coms.provincia}</p>
                     </button>
                 </div>
             </Link>
