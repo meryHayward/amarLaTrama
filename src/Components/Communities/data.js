@@ -1,4 +1,4 @@
-const data = [
+/*const data = [
     {
         id: "101",
         comunidad: "Itziar",
@@ -192,4 +192,4 @@ const data = [
           ],
     },
 ]
-export default data;
+export default data;*/
