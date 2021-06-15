@@ -4,15 +4,15 @@ import {
     Link
 } from 'react-router-dom';
 
-const Button = ({comunidad, id, pueblo, ciudad}) => {
+const Button = ({comunidad, pueblo, ciudad}) => {
     
     return (
         <React.Fragment>
 
-            <Link to={`/comunidad/${id}`}>
+            <Link to={`/comunidad/${comunidad}`} style={{textDecoration: 'none'}}>
                 <div className="btn-container" >
                     <button className="btn">
-                        <h4 className="btn-title"> {id}</h4>
+                        <h4 className="btn-title"> {comunidad}</h4>
                         <p className="btn-text">{pueblo} - {ciudad}</p>
                     </button>
                 </div>

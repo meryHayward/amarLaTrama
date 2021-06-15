@@ -1,31 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './DescriptionProductView.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import HeadProduct from '../HeadProduct/HeadProduct';
 import DescriptionProduct from '../DescriptionProduct/DescriptionProduct';
 import DowloadProduct from '../DowloadProduct/DowloadProduct';
-import axios from 'axios';
 import { useParams } from "react-router";
 
-const DescriptionProductView = () => {
+const DescriptionProductView = ({ nombreEs, nombreWichi, img, cantidad, descripcion }) => {
     const [product, setProduct] = useState({});
-    const { value } = useParams();
 
-    useEffect(() => {
-        axios.get(`https://ada-niwok.herokuapp.com/pedidos/${value}`)
-            .then(res => {
-                setProduct(res.data.pedido);
-                console.log(`que trae ${res.data.pedido.name}`)
-            })
-            .catch(err => alert(`Error! ${err}`));
-    }, []);
-
+   
     return (
         <React.Fragment>
             <HeadProduct imagen={product.media} cantidad={product.cantidad} />
             <section className="container-product">
-                <DescriptionProduct name={product.name} descripcion={product.descripcion} imagen={product.media} especificaciones={product.especificaciones} date={product.fechaDeEntrega} />
+                <DescriptionProduct name={nombreWichi} descripcion={descripcion} imagen={img} especificaciones={product.especificaciones} date={product.fechaDeEntrega} />
                 <DowloadProduct />
             </section>
             <button type="button" className="btn-back">

@@ -4,6 +4,7 @@
     flex-direction: center;
     justify-content: center;
     margin-top: 20px;
+    font-size: 40px;
     .btn{
         width: 80%;
         height: 50px;
@@ -11,10 +12,12 @@
         border-radius: 4px;
         background-color: #bd8436;
         .btn-title{
-color:  #503714;
+            font-size: 16px;
+            color:  #503714;
         }
         .btn-text{
-color:   #503714;
+            font-size: 13px;
+            color:   #503714;
         }
     }
 }
